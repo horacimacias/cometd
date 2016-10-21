@@ -123,8 +123,6 @@ angular.module('cometdAngularChat', ['cometd-reload'])
                     text: text
                 });
             }
-            //apply scope so that changes are seen on the UI
-            $scope.$apply();
 
             // TODO: scroll
             //chat[0].scrollTop = chat[0].scrollHeight - chat.outerHeight();
@@ -132,8 +130,6 @@ angular.module('cometdAngularChat', ['cometd-reload'])
 
         $scope.membership = function(message) {
             $scope.members = message.data;
-            //apply scope so that changes are seen on the UI
-            $scope.$apply();
         };
 
         function _subscribe() {
